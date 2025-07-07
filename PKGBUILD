@@ -14,10 +14,10 @@ options=()
 install=
 source=(${pkgname}::"git+file://${PWD}")
 
-export UPDATER_DIST="${pkgdir}/opt/gdl-updater"
-
 package() {
     cd "$srcdir"
+    export UPDATER_DIST="${pkgdir}/opt/gdl-updater"
+
     mkdir -p "${UPDATER_DIST}"
 
     install -Dm0644 $srcdir/${pkgname}/github.py -t ${UPDATER_DIST}
