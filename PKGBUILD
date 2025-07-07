@@ -12,7 +12,7 @@ optdepends=()
 backup=()
 options=()
 install=
-source=("git+file://${PWD}")
+source=(${pkgname}::"git+file://${PWD}")
 
 export UPDATER_DIST="${pkgdir}/opt/gdl-updater"
 
@@ -20,11 +20,11 @@ package() {
     cd "$srcdir"
     mkdir -p "${UPDATER_DIST}"
 
-    install -Dm0644 $srcdir/github.py -t ${UPDATER_DIST}
-    install -Dm0644 $srcdir/main_window.py -t ${UPDATER_DIST}
-    install -Dm0644 $srcdir/main.py -t ${UPDATER_DIST}
-    install -Dm0644 $srcdir/update_threads.py -t ${UPDATER_DIST}
-    install -Dm0644 $srcdir/update.py -t ${UPDATER_DIST}
+    install -Dm0644 $srcdir/${pkgname}/github.py -t ${UPDATER_DIST}
+    install -Dm0644 $srcdir/${pkgname}/main_window.py -t ${UPDATER_DIST}
+    install -Dm0644 $srcdir/${pkgname}/main.py -t ${UPDATER_DIST}
+    install -Dm0644 $srcdir/${pkgname}/update_threads.py -t ${UPDATER_DIST}
+    install -Dm0644 $srcdir/${pkgname}/update.py -t ${UPDATER_DIST}
     
-    install -Dm0644 $srcdir/assets/gdl-updater.desktop -t "${pkgdir}/usr/share/applications"
+    install -Dm0644 $srcdir/${pkgname}/assets/gdl-updater.desktop -t "${pkgdir}/usr/share/applications"
 }
