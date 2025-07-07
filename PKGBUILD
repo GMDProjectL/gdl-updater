@@ -5,7 +5,7 @@ pkgdesc="Project GDL Installer Updater"
 arch=('any')
 url="https://github.com/GMDProjectL/gdl-updater"
 license=('GPL')
-depends=('python-requests', 'pyside6')
+depends=('python-requests' 'pyside6')
 makedepends=()
 checkdepends=()
 optdepends=()
@@ -14,7 +14,7 @@ options=()
 install=
 source=("git+file://${srcdir}")
 
-export UPDATER_DIST = "${pkgdir}/opt/gdl-updater"
+export UPDATER_DIST="${pkgdir}/opt/gdl-updater"
 
 package() {
     cd "$srcdir"
