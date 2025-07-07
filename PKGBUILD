@@ -12,7 +12,7 @@ optdepends=()
 backup=()
 options=()
 install=
-source=("git+file://${srcdir}")
+source=("git+file://${PWD}")
 
 export UPDATER_DIST="${pkgdir}/opt/gdl-updater"
 
