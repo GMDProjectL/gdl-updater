@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Exec=python3 /opt/gdl-updater/main.py
+Icon=system-software-update
+Terminal=False
+Categories=System;Documentation;
+
+Name=Update GDL
+Name[ru]=Обновить GDL
+
+Comment=Install the latest system update
+Comment[ru]=Установить последнее системное обновление
