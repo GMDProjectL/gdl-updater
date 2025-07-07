@@ -1,10 +1,10 @@
-from PySide6 import QtCore
+from PySide6.QtCore import QThread, Signal
 from update import download_and_unpack_installer, install_dependencies, build_installer
 from traceback import format_exc
 
 
-class UpdateStepThread(QtCore.QThread):
-    finished_signal = QtCore.Signal(bool, str) # Is successful
+class UpdateStepThread(QThread):
+    finished_signal = Signal(bool, str) # Is successful
     installer_dir = ''
 
     def __init__(self, parent = None, installer_dir = '/opt/installer'):
