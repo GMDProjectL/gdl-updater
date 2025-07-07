@@ -1,11 +1,11 @@
 pkgname=gdl-updater
-pkgver=1.0
+pkgver=1.1
 pkgrel=1
 pkgdesc="Project GDL Installer Updater"
 arch=('any')
 url="https://github.com/GMDProjectL/gdl-updater"
 license=('GPL')
-depends=('python-requests' 'pyside6')
+depends=('python-requests' 'python-systemd' 'pyside6')
 makedepends=()
 checkdepends=()
 optdepends=()
